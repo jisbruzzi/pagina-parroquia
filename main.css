@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+
+a {
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Standard syntax */
+}
+
+#header {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#PSJ {
+    font-size: 50px;
+    padding: 10px;
+    margin: 0;
+}
+
+#header > nav {
+    margin: 0;
+    height: 100%;
+}
+
+nav > a {
+    margin:0;
+    height: 100%;
+    padding: 0;
+}
