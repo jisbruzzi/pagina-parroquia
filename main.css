@@ -1,6 +1,6 @@
 * {
-    box-sizing: border-box;
-    border: 1px solid red;
+    box-sizing: content-box;
+    !border: 1px solid red;
     font-size: 18px;
 }
 
@@ -38,7 +38,7 @@ nav > a {
     align-content: center;
     align-items: center;
     
-    background-color: #F1F1F1;
+    background-color: #F5F5F5;
     transition: background-color .05s linear;
 }
 
@@ -58,13 +58,14 @@ nav > a:link, a:visited {
 }
 
 a:hover {
-    background-color: lightgray;
+    background-color: rgb(255,255,0,.6);
+    border: 2px solid #EAEAEA !important;
 }
 
 a:link:active, a:visited:active {
     color: black;
     text-decoration: none;
-    background-color: gray;
+    background-color: rgb(255,255,0,.8);
 }
 
 
