@@ -1,18 +1,21 @@
 let gulp = require("gulp")
-let File=require("vinyl")
 let replace = require('gulp-replace');
 
 
 gulp.task("compilar",function(){
-    gulp.src(["cosa1.txt","cosa2.txt"])
-        
+    gulp.src(["*.txt","cosas/*.txt"])
         .pipe(replace("11","2"))
-        .pipe(miIncluder())
+        .pipe(includer())
         .pipe(gulp.dest("./compilado/"))
 })
 
+let File=require("vinyl")
 let through=require("through2")
-var miIncluder=function(){
+
+const Includer=require("./Includer")
+
+var includer=function(){
+    let includer=new Includer();
 
     let files={}
 
@@ -28,68 +31,68 @@ var miIncluder=function(){
             cb();
             return;
         }
-
-        console.log(file)
-        files[file.path.replace(file.base,"")]=file.contents.toString()
-
+        //store the contents in memory
+        includer.add(file.path.replace(file.cwd,"").slice(1), file.contents.toString());
         cb();
     }
 
     function endStream(cb){
-        let results=combine(files);
+        
+        let results=[]
+        let error=null;
+        try{
+            results=includer.combinedFiles();
+        }catch(e){
+            this.emit(e.message)
+            error=e;
+        }
         for(let fName in results){
             let file=new File({
-                cwd:"/",
-                base:"/",
-                path:"/"+fName,
+                path:fName,
                 contents:Buffer.from(results[fName],"utf8")
             });
+
             this.push(file);
         }
-        cb(null);
+        cb(error);
     }
 
     return through.obj(bufferContents,endStream)
 }
 
 
-function combine(files){
-    //get the files that are not included by any other file
-    let includedByNone=Object.keys(files).filter(fname=>includedBy(fname,files).length==0)
-    // TODO:    error on includedByNone==0
-    console.log("Included by none:",includedByNone)
 
-    //build the final files
-    let finalFiles={};
-    for(let fname of includedByNone){
-        finalFiles[fname]=buildFile(fname,files)
+function buildFile(finalName,files,history){
+    //check if we are in a loop
+    if(history==null) history=[];
+    if(history.includes(finalName)){
+        let myPosition=history.indexOf(finalName);
+        let relevantHistory=history.splice(myPosition,history.length);
+        let messagePart = relevantHistory.concat([finalName]).join(" --> ")
+        throw new Error("gulp-includer: Cyclic reference: "+messagePart)
     }
-    console.log(finalFiles);
-    return finalFiles;
-}
+    let nextHistory=history.concat([finalName])
 
-function includedBy(testedFname,files){
-    let ret =  Object.keys(files).filter((possibleIncluder)=>{
-        //does posibleIncluder include the testedFname?
-        let regexp=new RegExp("(//|#|<!--) *include +"+testedFname+" *(-->)?")
-        let includerContent=files[possibleIncluder]
-        return regexp.test(includerContent)
-    })
-    console.log(testedFname+" is included by "+ret);
-    return ret;
-}
-
-//no loop detection
-function buildFile(finalName,files){//TODO: ERROR ON LOOPS (agregar un historial)
-    console.log("building "+finalName)
+    //check that all includes are OK
     let ret=files[finalName];
-    for(let fname in files){
+    
+    for(let f of includedFiles){
+        let actualFname=path.join(finalName,"../",f)
+        console.log(actualFname);
+        if(files[actualFname]==undefined){
+            throw new Error("gulp-includer: Cannot include "+f+" in file "+finalName+": gulp includer didn´t receive the file "+actualFname);
+        }
+    }
+    
+    //replace the contents of such files
+    for(let fname in includedFiles){
         //if the file is found, build it and then add it
         let regexp=new RegExp("(//|#|<!--) *include +"+fname+" *(-->)?")
         if(regexp.test(ret)){
-            ret=ret.replace(regexp,buildFile(fname,files))//recursive call, skipped for files with no #includes
+            let actualFname=path.join(finalName,"../",fname)
+            ret=ret.replace(regexp,buildFile(actualFname,files,nextHistory))//recursive call, skipped for files with no #includes
         }
     }
-    console.log("Result: "+ret);
+    
     return ret;
 }

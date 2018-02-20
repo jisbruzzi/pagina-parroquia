@@ -1,0 +1,3 @@
+soy una cosita que tiene otras cosas
+#include ./altacosa.txt
+#include ../cosa4.txt

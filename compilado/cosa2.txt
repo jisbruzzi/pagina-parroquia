@@ -2,4 +2,8 @@ hola, yo soy la cosa 2, abajo hay muchos 2
 22222221
 22222221
 22222221
+soy la cosa 3
+soy la cosa 4
 y acá siguen las cosas 2
+
+soy alta cosa
