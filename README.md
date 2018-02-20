@@ -4,8 +4,9 @@ Prueba para la página de la parroquia
 
 > Si, nos gusta el internet
 > Nos gusta lo bueno
-> No nos gusta lo mal
+> No nos gusta lo malo
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NDgzNTg4OV19
+eyJoaXN0b3J5IjpbLTg0MzczNTYxOF19
 -->
