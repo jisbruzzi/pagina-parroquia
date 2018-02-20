@@ -6,7 +6,8 @@ Prueba para la página de la parroquia
 > Nos gusta lo bueno
 > No nos gusta lo malo
 
+si, eso es lo que nos gusta.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0MzczNTYxOF19
+eyJoaXN0b3J5IjpbMTA5MDg2NDk0M119
 -->
