@@ -1,7 +1,15 @@
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box; /* Safari 3.1+ */
+    -moz-box-sizing: border-box; /* Firefox 2+ */
+    -ms-box-sizing: border-box;; /* IE 10+ */
+    box-sizing: border-box; /* Standard syntax */
+    
+    font-size: 25px;
+    
     border: 1px solid red;
 }
+
+html { height: 100%; }
 
 a {
     -webkit-user-select: none; /* Safari 3.1+ */
@@ -12,26 +20,48 @@ a {
 
 #header {
     width: 100%;
+    height: 15vh;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
+    position: relative;
 }
 
 #PSJ {
     font-size: 50px;
+    width: 60%;
     padding: 10px;
     margin: 0;
 }
 
 #header > nav {
-    margin: 0;
     height: 100%;
+    width: 40%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+
 }
 
 nav > a {
     margin:0;
+    padding: 5vh;
+    text-align: center;
+    align-content: center;
     height: 100%;
-    padding: 0;
+}
+
+#container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+#avisos {
+    width: 40%;
+    height: 80vh;
 }
