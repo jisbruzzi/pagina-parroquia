@@ -1,12 +1,12 @@
 * {
     box-sizing: border-box;
-    border: 1px solid red;
+    !border: 1px solid red;
     font-size: 18px;
 }
 
 body {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
     padding-top: 2%;
     background-color: #EAEAEA;
 }
@@ -38,7 +38,7 @@ nav > a {
     align-content: center;
     align-items: center;
     
-    background-color: #F1F1F1;
+    background-color: #F5F5F5;
     transition: background-color .05s linear;
 }
 
@@ -59,6 +59,7 @@ nav > a:link, a:visited {
 
 a:hover {
     background-color: rgb(255,255,0,.6);
+    border: 2px solid #EAEAEA !important;
 }
 
 a:link:active, a:visited:active {
@@ -71,24 +72,46 @@ a:link:active, a:visited:active {
 #contenedor_principal {
     width: 100%;
     height: 100%;
-
-
     margin: 5% 0;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
     border-radius: 10px;
     background-color: #F1F1F1;
 }
 
-.institucion {
-    flex-grow: 1;
-    height: 50%;
-    width: 33%;
-    height: 500px;
-    min-width: 250px;
-    margin: 10px;
-    border: 2px solid lightgray;
-    border-radius: 12px; 
+#contenedor_principal > * {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
-    
+
+aside {
+    flex-grow: .2;
+    border-right: 5px solid #EAEAEA;
+}
+
+#avisos {
+    flex-grow: 2;
+}
+
+#contenedor_principal > * > * {
+    margin: 5% 0;
+    padding: 15px 0;
+}
+
+.txt_tabulado {
+    padding-inline-start: 1.5em;
+}
+
+#avisos > article {
+    margin-inline-start: 5%;
+}
+
+@media screen and (max-width: 600px) {
+    #contenedor_principal { display: inline-block }
+
+    aside { border: none; flex-grow: 0; height: auto; }
+
+    #avisos { flex-grow: 0; height: auto; }
+
+}
