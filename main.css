@@ -11,6 +11,10 @@
 
 html { height: 100%; }
 
+body {
+    background-image: url("https://1.bp.blogspot.com/-mY8fBxkzZ6s/WT9dopryxsI/AAAAAAAABMs/semrmB9-UFcsbO4iVSB_2KzVAdcJzvCkwCLcB/s1600/07%2B-%2BIGLESIA%2BDE%2BLORETO%252C%2B08-VI-2017.jpg");
+}
+
 a {
     -webkit-user-select: none; /* Safari 3.1+ */
     -moz-user-select: none; /* Firefox 2+ */
