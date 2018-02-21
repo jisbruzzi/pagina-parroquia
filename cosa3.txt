@@ -1,2 +1,0 @@
-soy la cosa 3
-!./cosa2.txt!

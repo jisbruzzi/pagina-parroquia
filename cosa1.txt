@@ -1,7 +1,0 @@
-111111111
-111111111
-111111111
-#include ./cosa3.txt
-#include ./cosa4.txt
-
-<!--include cosa4.txt-->

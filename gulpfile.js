@@ -1,8 +1,8 @@
 let gulp = require("gulp")
 let replace = require('gulp-replace');
 var fileinclude = require('gulp-file-include');
-const Includer=require("./Includer");
-const regexIncluder=require("./regexIncluder")
+const Combiner=require("gulp-file-combiner");
+const regexIncluder=require("file-combiner-regex-includer")
 
 gulp.task("compilar",function(){
     gulp.src(["*.txt","cosas/*.txt"])
