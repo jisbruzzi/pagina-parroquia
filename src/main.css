@@ -7,11 +7,13 @@
     font-size: 25px;
     
     border: 1px solid red;
+    
 }
 
 html { height: 100%; }
 
 body {
+    margin: 0;
     background-image: url("https://1.bp.blogspot.com/-mY8fBxkzZ6s/WT9dopryxsI/AAAAAAAABMs/semrmB9-UFcsbO4iVSB_2KzVAdcJzvCkwCLcB/s1600/07%2B-%2BIGLESIA%2BDE%2BLORETO%252C%2B08-VI-2017.jpg");
 }
 
@@ -31,6 +33,7 @@ a {
     flex-direction: row;
     align-items: center;
     position: relative;
+    background:linear-gradient(to bottom, rgba(248,248,120,1),rgba(248,248,120,0))
 }
 
 #PSJ {
@@ -46,6 +49,7 @@ a {
     flex-grow: 1;
     display: flex;
     flex-direction: row;
+
 
 }
 
