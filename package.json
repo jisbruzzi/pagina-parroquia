@@ -1,0 +1,31 @@
+{
+  "name": "pagina-parroquia",
+  "version": "1.0.0",
+  "description": "pagina para laparroquia San José",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jisbruzzi/pagina-parroquia.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jisbruzzi/pagina-parroquia/issues"
+  },
+  "homepage": "https://github.com/jisbruzzi/pagina-parroquia#readme",
+  "dependencies": {
+    "del": "^3.0.0",
+    "file-combiner-regex-includer": "^0.1.0",
+    "gulp": "^3.9.1",
+    "gulp-add-src": "^0.2.0",
+    "gulp-file-combiner": "^0.1.1",
+    "gulp-markdown": "^2.0.1",
+    "gulp-rename": "^1.2.2"
+  },
+  "devDependencies": {
+    "gulp-replace": "^0.6.1"
+  }
+}
