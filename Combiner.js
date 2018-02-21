@@ -5,6 +5,8 @@ const path=require("path")
  * @param {String} fileContent 
  */
 function getIncludes(fileContent){
+    return [];
+    /*
     let regexp=new RegExp("(#|//|<!--) *include +([^\\s(-->)]+)(\\s*)(-->)?","g")
     let included=[];
     let a=null
@@ -13,6 +15,7 @@ function getIncludes(fileContent){
         match:a[0]
     })
     return included;
+    */
 }
 
 /**
