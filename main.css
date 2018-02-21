@@ -24,13 +24,15 @@ a {
 
 #header {
     width: 100%;
-    height: 15vh;
+    height: 13vh;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     position: relative;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 #PSJ {
@@ -38,6 +40,8 @@ a {
     width: 60%;
     padding: 10px;
     margin: 0;
+    border-top-left-radius: 10px;
+    background: linear-gradient(rgba(250,250,250,1), rgba(250,250,250,1), rgba(245,245,245,.8));
 }
 
 #header > nav {
@@ -46,12 +50,13 @@ a {
     flex-grow: 1;
     display: flex;
     flex-direction: row;
-
+    background-color: rgb(250,250,250);
+    border-top-right-radius: 10px;
 }
 
 nav > a {
     margin:0;
-    padding: 5vh;
+    padding: 4vh;
     text-align: center;
     align-content: center;
     height: 100%;
