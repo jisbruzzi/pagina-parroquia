@@ -7,12 +7,24 @@
     font-size: 25px;
     
     border: 1px solid red;
+
+    font-family: -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol";
     
 }
 
 html { height: 100%; }
 
 body {
+    
     margin: 0;
     background-image: url("https://1.bp.blogspot.com/-mY8fBxkzZ6s/WT9dopryxsI/AAAAAAAABMs/semrmB9-UFcsbO4iVSB_2KzVAdcJzvCkwCLcB/s1600/07%2B-%2BIGLESIA%2BDE%2BLORETO%252C%2B08-VI-2017.jpg");
 }
@@ -27,28 +39,33 @@ a {
 #header {
     width: 100%;
     height: 15vh;
-    padding: 0;
+    padding-right: 3%;
+    padding-left: 3%;
     margin: 0;
+    
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+
     position: relative;
-    background:linear-gradient(to bottom, rgba(248,248,120,1),rgba(248,248,120,0))
+    background:linear-gradient(to bottom, rgba(248,248,120,1), rgba(248,248,120,0.6) 80% ,rgba(248,248,120,0))
 }
 
 #PSJ {
     font-size: 50px;
-    width: 60%;
+    /*width: 60%;*/
     padding: 10px;
     margin: 0;
 }
 
 #header > nav {
     height: 100%;
-    width: 40%;
-    flex-grow: 1;
+    /*width: 40%;*/
+    /*flex-grow: 1;*/
     display: flex;
     flex-direction: row;
+    
 
 
 }
