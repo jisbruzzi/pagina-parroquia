@@ -1,5 +1,1 @@
-hola, yo soy la cosa 2, abajo hay muchos 2
-<!--      include  ./cosa1.txt-->
-y acá siguen las cosas 2
-
-#include cosas/altacosa.txt
+2

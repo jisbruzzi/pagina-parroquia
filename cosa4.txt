@@ -1,1 +1,2 @@
 soy la cosa 4
+!./cosa2.txt!
