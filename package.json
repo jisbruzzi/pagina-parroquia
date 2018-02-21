@@ -19,8 +19,9 @@
   "dependencies": {
     "file-combiner-regex-includer": "^0.1.0",
     "gulp": "^3.9.1",
-    "gulp-file-combiner": "^0.1.0",
-    "gulp-file-include": "^2.0.1"
+    "gulp-add-src": "^0.2.0",
+    "gulp-file-combiner": "^0.1.1",
+    "gulp-markdown": "^2.0.1"
   },
   "devDependencies": {
     "gulp-replace": "^0.6.1"
