@@ -11,7 +11,7 @@ gulp.task("compilar",function(){
     del.sync("docs/*")
     gulp.src("src/md/**.md")
         .pipe(markdown())
-        .pipe(addsrc(["src/**.css","src/**.html"]))
+        .pipe(addsrc(["src/**.css","src/**.svg","src/**.html"]))
         .pipe(new Combiner([
             regexIncluder("# *include +(\\S+)\\s*",0),
             regexIncluder("// *include +(\\S+)\\s*",0),
