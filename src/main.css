@@ -5,6 +5,8 @@
     box-sizing: border-box; /* Standard syntax */
     
     font-size: 25px;
+    
+    border: 1px solid red;
 
     font-family: -apple-system,
         BlinkMacSystemFont,
@@ -19,6 +21,7 @@
     
 }
 
+
 html { height: 100%; }
 
 body {
@@ -32,7 +35,7 @@ body {
     justify-content: flex-end;
     
     margin: 0;
-    background-image: url("foto.jpg");
+    background-image: url("https://1.bp.blogspot.com/-mY8fBxkzZ6s/WT9dopryxsI/AAAAAAAABMs/semrmB9-UFcsbO4iVSB_2KzVAdcJzvCkwCLcB/s1600/07%2B-%2BIGLESIA%2BDE%2BLORETO%252C%2B08-VI-2017.jpg");
 }
 
 a {
@@ -47,7 +50,8 @@ a:hover{
 }
 
 #header {
-    position: absolute;
+    position: fixed;
+    width: 30%;
 
     width: 100%;/*
     padding-right: 3%;
@@ -59,7 +63,7 @@ a:hover{
     align-items: center;
     justify-content: space-around;
 
-    position: relative;
+    
     background:white;
     border-top: 0px;
 }
@@ -76,6 +80,7 @@ a:hover{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    height:10vh
 }
 
 nav > a {
@@ -119,22 +124,25 @@ nav > a:hover {
 
 #filler {
     width:100%;
-    position:relative;
 }
 #adelante {
-    width:100%;
-    position:absolute;
+    top:10vh;
+    width:30%;
+    position:fixed;
     z-index: 1;
 }
 #atras {
-    width:100%;
-    position:absolute;
+    top:10vh;
+    width:30%;
+    position:fixed;
     z-index: -1;
 }
 
 #avisos {
     position: absolute;
     z-index: -1;
+
+    top:30vh;
 
     width: 80%;
     height: 200vh;
