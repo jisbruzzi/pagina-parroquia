@@ -3,6 +3,8 @@
     -moz-box-sizing: border-box; /* Firefox 2+ */
     -ms-box-sizing: border-box;; /* IE 10+ */
     box-sizing: border-box; /* Standard syntax */
+
+    /*border: 1px solid red;*/
     
     font-size: 25px;
 
@@ -32,7 +34,7 @@ body {
     justify-content: flex-end;
     
     margin: 0;
-    background-image: url("foto.jpg");
+    background-image: url("./foto.jpg");
 }
 
 a {
@@ -84,6 +86,11 @@ nav > a {
 
 #logo-container {
     flex-grow: 1;
+}
+
+#fixed {
+    width:30%;
+    position: fixed;
 }
 
 #container {
