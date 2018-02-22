@@ -3,10 +3,10 @@
     -moz-box-sizing: border-box; /* Firefox 2+ */
     -ms-box-sizing: border-box;; /* IE 10+ */
     box-sizing: border-box; /* Standard syntax */
-
-    /*border: 1px solid red;*/
     
     font-size: 25px;
+    
+    /border: 1px solid red;
 
     font-family: -apple-system,
         BlinkMacSystemFont,
@@ -21,20 +21,22 @@
     
 }
 
+
 html { height: 100%; }
 
 body {
 
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
 
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
     
+    align-items: flex-start;
+    justify-content: space-between;
+
     margin: 0;
-    background-image: url("./foto.jpg");
+    background-image: url("https://1.bp.blogspot.com/-mY8fBxkzZ6s/WT9dopryxsI/AAAAAAAABMs/semrmB9-UFcsbO4iVSB_2KzVAdcJzvCkwCLcB/s1600/07%2B-%2BIGLESIA%2BDE%2BLORETO%252C%2B08-VI-2017.jpg");
 }
 
 a {
@@ -44,53 +46,48 @@ a {
     user-select: none; /* Standard syntax */
 }
 
-#header {
-    position: absolute;
+a:hover{
+    cursor: pointer;
+}
 
-    width: 100%;
-    padding-right: 3%;
-    padding-left: 3%;
+#header {
+    position: fixed;
+    width: 30%;
+    height: 10vh;
     margin: 0;
     
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-around;
 
-    position: relative;
     background:white;
 }
 
-#PSJ {
-    font-size: 50px;
-    /*width: 60%;*/
-    padding: 10px;
-    margin: 0;
-}
-
 #header > nav {
-    /*height: 100%;*/
-    /*width: 40%;*/
-    /*flex-grow: 1;*/
+    flex-grow: 1;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }
 
 nav > a {
-    margin:0;
-    /*padding: 5vh;*/
-    text-align: center;
-    align-content: center;
-    height: 100%;
+    color: #777;
+}
+
+nav > a:first-child{
+    border-bottom: 3px solid #000 !important;
+    color: #000;
+    font-weight: 500;
+}
+
+nav > a:hover {
+    border-bottom: 3px solid #777;
 }
 
 #logo-container {
-    flex-grow: 1;
-}
-
-#fixed {
-    width:30%;
-    position: fixed;
+    flex-grow: 0;
+    font-size: 50px;
+    padding: 10px;
 }
 
 #container {
@@ -108,16 +105,17 @@ nav > a {
 
 #filler {
     width:100%;
-    position:relative;
 }
 #adelante {
-    width:100%;
-    position:absolute;
+    top:10vh;
+    width:30%;
+    position:fixed;
     z-index: 1;
 }
 #atras {
-    width:100%;
-    position:absolute;
+    top:10vh;
+    width:30%;
+    position:fixed;
     z-index: -1;
 }
 
@@ -125,10 +123,12 @@ nav > a {
     position: absolute;
     z-index: -1;
 
+    top: 30vh;
+
     width: 80%;
     height: 200vh;
+    
     background-color: whitesmoke;
 
     margin-left:10%;
-    margin-right:10%;
 }

@@ -32,6 +32,9 @@ body {
     display: flex;
     flex-direction: row;
     
+    align-items: flex-start;
+    justify-content: space-between;
+
     margin: 0;
     background-image: url("https://1.bp.blogspot.com/-mY8fBxkzZ6s/WT9dopryxsI/AAAAAAAABMs/semrmB9-UFcsbO4iVSB_2KzVAdcJzvCkwCLcB/s1600/07%2B-%2BIGLESIA%2BDE%2BLORETO%252C%2B08-VI-2017.jpg");
 }
@@ -60,12 +63,6 @@ a:hover{
     background:white;
 }
 
-#PSJ {
-    font-size: 50px;
-    padding: 10px;
-    margin: 0;
-}
-
 #header > nav {
     flex-grow: 1;
     display: flex;
@@ -88,7 +85,9 @@ nav > a:hover {
 }
 
 #logo-container {
-    flex-grow: 1;
+    flex-grow: 0;
+    font-size: 50px;
+    padding: 10px;
 }
 
 #container {
