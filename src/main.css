@@ -6,7 +6,7 @@
     
     font-size: 25px;
     
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 
     font-family: -apple-system,
         BlinkMacSystemFont,
@@ -34,7 +34,7 @@ body {
     justify-content: flex-end;
     
     margin: 0;
-    background-image: url("https://1.bp.blogspot.com/-mY8fBxkzZ6s/WT9dopryxsI/AAAAAAAABMs/semrmB9-UFcsbO4iVSB_2KzVAdcJzvCkwCLcB/s1600/07%2B-%2BIGLESIA%2BDE%2BLORETO%252C%2B08-VI-2017.jpg");
+    background-image: url("foto.jpg");
 }
 
 a {
