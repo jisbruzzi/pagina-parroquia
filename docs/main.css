@@ -3,10 +3,10 @@
     -moz-box-sizing: border-box; /* Firefox 2+ */
     -ms-box-sizing: border-box;; /* IE 10+ */
     box-sizing: border-box; /* Standard syntax */
-
-    /*border: 1px solid red;*/
     
     font-size: 25px;
+    
+    border: 1px solid red;
 
     font-family: -apple-system,
         BlinkMacSystemFont,
@@ -21,6 +21,7 @@
     
 }
 
+
 html { height: 100%; }
 
 body {
@@ -34,7 +35,7 @@ body {
     justify-content: flex-end;
     
     margin: 0;
-    background-image: url("./foto.jpg");
+    background-image: url("https://1.bp.blogspot.com/-mY8fBxkzZ6s/WT9dopryxsI/AAAAAAAABMs/semrmB9-UFcsbO4iVSB_2KzVAdcJzvCkwCLcB/s1600/07%2B-%2BIGLESIA%2BDE%2BLORETO%252C%2B08-VI-2017.jpg");
 }
 
 a {
@@ -45,9 +46,9 @@ a {
 }
 
 #header {
-    position: absolute;
+    position: fixed;
+    width: 30%;
 
-    width: 100%;
     padding-right: 3%;
     padding-left: 3%;
     margin: 0;
@@ -57,7 +58,7 @@ a {
     align-items: center;
     justify-content: space-around;
 
-    position: relative;
+    
     background:white;
 }
 
@@ -69,11 +70,9 @@ a {
 }
 
 #header > nav {
-    /*height: 100%;*/
-    /*width: 40%;*/
-    /*flex-grow: 1;*/
     display: flex;
     flex-direction: row;
+    height:10vh
 }
 
 nav > a {
@@ -86,11 +85,6 @@ nav > a {
 
 #logo-container {
     flex-grow: 1;
-}
-
-#fixed {
-    width:30%;
-    position: fixed;
 }
 
 #container {
@@ -108,22 +102,25 @@ nav > a {
 
 #filler {
     width:100%;
-    position:relative;
 }
 #adelante {
-    width:100%;
-    position:absolute;
+    top:10vh;
+    width:30%;
+    position:fixed;
     z-index: 1;
 }
 #atras {
-    width:100%;
-    position:absolute;
+    top:10vh;
+    width:30%;
+    position:fixed;
     z-index: -1;
 }
 
 #avisos {
     position: absolute;
     z-index: -1;
+
+    top:30vh;
 
     width: 80%;
     height: 200vh;
