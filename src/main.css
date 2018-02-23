@@ -59,7 +59,7 @@ a:hover{ cursor: pointer; }
 #header {
     position: fixed;
     width: 30%;
-    height: 10vh;
+    height: 9.2vh;
     min-height: 50px;
     
     display: flex;
@@ -124,6 +124,7 @@ nav > a:first-child{
     #container { position: static; top: 0; width: 100%; margin: 0;}
 
     #header {
+        visibility: hidden;
         position: fixed;
         z-index: 8;
         width: 100%; 
@@ -133,6 +134,7 @@ nav > a:first-child{
 
     #logo { 
         display: flex;
+        z-index: 7;
         width: 100%;
         padding:0;
         align-items: center;
@@ -146,7 +148,7 @@ nav > a:first-child{
 
     .arcos-svg { 
         position: fixed;
-        top: 20vh;
+        top: 7vh;
         width: 100%; 
     }
 
