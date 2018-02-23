@@ -4,7 +4,8 @@
   "description": "pagina para laparroquia San José",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp":"gulp"
   },
   "repository": {
     "type": "git",
@@ -23,9 +24,13 @@
     "gulp-add-src": "^0.2.0",
     "gulp-file-combiner": "^0.1.1",
     "gulp-markdown": "^2.0.1",
-    "gulp-rename": "^1.2.2"
+    "gulp-rename": "^1.2.2",
+    "pre-commit": "^1.2.2"
   },
   "devDependencies": {
     "gulp-replace": "^0.6.1"
+  },
+  "pre-commit":{
+    "gulp"
   }
 }
