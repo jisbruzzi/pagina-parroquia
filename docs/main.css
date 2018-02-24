@@ -4,9 +4,9 @@
     -ms-box-sizing: border-box;; /* IE 10+ */
     box-sizing: border-box; /* Standard syntax */
     
-    font-size: 25px;
+    font-size: 20px;
     
-    border: 1px solid red;
+    /* border: 1px solid red; */
 
     font-family: -apple-system,
         BlinkMacSystemFont,
@@ -28,7 +28,7 @@ body {
     height: 100%;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     
     align-items: flex-start;
     justify-content: space-between;
@@ -52,9 +52,14 @@ a:hover{ cursor: pointer; }
 
 #logo {
     flex-grow: 0;
-    font-size: 50px;
+    font-size: calc(4.5vw);
     padding: 10px;
+    z-index: 1;
+    position: fixed;
+    background-color: white;
 }
+
+#hamburger { position: fixed; z-index: -1; }
 
 #header {
     position: fixed;
@@ -62,34 +67,50 @@ a:hover{ cursor: pointer; }
     height: 9.2vh;
     min-height: 50px;
     
+    z-index: 3;
+
     display: flex;
     align-items: center;
     justify-content: space-around;
 
     background:white;
+    min-width: 320px;
 }
 
 #header > nav {
     flex-grow: 1;
     display: flex;
     justify-content: space-around;
+    height: 9.2vh;
+    min-height: 55px;
+    margin: 0;
+    min-width: 320px;
 }
 
-nav > a { color: #888; }
-
-nav > a:hover { border-bottom: 3px solid #888; }
+nav > a { 
+    color: #888; 
+    vertical-align: middle;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    justify-items: center;
+    align-content: center;
+}
+nav > a:hover { border-bottom: 3px solid #888; border-top: 3px solid rgba(0,0,0,0);  }
 
 nav > a:first-child{
     border-bottom: 3px solid #000;
+    border-top: 3px solid rgba(0,0,0,0);
     color: #000;
 }
 
 #container {
     height: 100%;
     width: 30%;
-    
-    margin-left:5%;
-    margin-right:5%;
+    min-width: 320px;
+    margin-left:5vw;
+    margin-right:5vw;
 
     position: relative;
     display: flex;
@@ -97,9 +118,9 @@ nav > a:first-child{
 }
 
 .arcos-svg {
-    top: 10vh;
+    top: 9.2vh;
     width: 30%;
-    min-width: 300px;
+    min-width: 320px;
     position: fixed;
     z-index: 1;
 }
@@ -109,6 +130,8 @@ nav > a:first-child{
     height: 100vh;
     margin-left: 10%;
     border-radius: 10px;
+    min-width: 256px;
+
 
     position: absolute;
     top: 30vh;
@@ -117,9 +140,34 @@ nav > a:first-child{
     background-color: whitesmoke;
 }
 
-@media screen and (max-width: 1100px) {
-    body { flex-direction: column; }
+#menu-exterior {
+    z-index: 10;
+    width: 60vw;
+    height: 90vh;
+    position: fixed;
+    right: -60vw;
+    top: 10vh;
+    background-color: #EEE;
+    transition: transform .1s linear;
+    border-left: 2px solid #DDD;
+}
 
+
+@media screen and (max-height: 460px) {
+    .arcos-svg { top: 42px; }
+}
+
+@media screen and (max-width: 800px) { #logo { font-size: 4vw; } }
+
+@media screen and (max-width:710px) {
+    body { flex-direction: column; align-items: center;}
+    #logo { font-size: 27.5px; height: 10vh; min-width: 320px;}
+    #container { top: 9.2vh; }
+    .arcos-svg { top: 17.5vh; }
+}
+
+@media screen and (max-width: 500px) {
+    body { flex-direction: column; }
 
     #container { position: static; top: 0; width: 100%; margin: 0;}
 
@@ -143,7 +191,15 @@ nav > a:first-child{
         position: fixed; 
         height: 10vh; 
         top: 0; 
-        background-color: white;
+    }
+
+    #hamburger {
+        width: 10vh;
+        height: 10vh;
+        z-index: 9;
+        position: fixed;
+        right: 0;
+        top: 0;
     }
 
     .arcos-svg { 
@@ -153,4 +209,10 @@ nav > a:first-child{
     }
 
     #avisos { position: static; height: 200vh ; margin-top: 70vh; }
+
+    #hamburger { z-index: 10; }
+}
+
+@media screen and (max-width: 360px) {
+    #logo { font-size: calc(8vw - 1vh + 2px); }
 }
