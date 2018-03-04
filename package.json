@@ -25,6 +25,7 @@
     "gulp-file-combiner": "^0.1.1",
     "gulp-markdown": "^2.0.1",
     "gulp-rename": "^1.2.2",
+    "gulp-webserver": "^0.9.1",
     "pre-commit": "^1.2.2"
   },
   "devDependencies": {

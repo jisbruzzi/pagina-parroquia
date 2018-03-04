@@ -18,7 +18,7 @@ gulp.task("compilar",function(){
             regexIncluder("<!-- *include +(\\S+)\\s*-->",0),
             regexIncluder("!\\s*(\\S+)\\s*!",0)
         ]))
-        .pipe(addsrc(["src/**.css","src/**.svg","src/**.jpg"]))
+        .pipe(addsrc(["src/**.less","src/**.svg","src/**.jpg"]))
         .pipe(rename(path=>{
             console.log(path);
             path.dirname=path.dirname.replace("src","");
@@ -26,5 +26,20 @@ gulp.task("compilar",function(){
         .pipe(gulp.dest("./docs/"))
 })
 
+var webserver = require('gulp-webserver');
+ 
+gulp.task('webserver', function() {
+  gulp.src('.')
+    .pipe(webserver({
+      livereload: true,
+      directoryListing: true,
+      open: true
+    }));
+});
+
+
+gulp.task("watch",function(){
+    gulp.watch(["preindex.html","texto.md"],["compilar"])
+})
 
 gulp.task("default",["compilar"])
