@@ -56,6 +56,12 @@ body {
     @anchoContenido:30vw;
     //sobra:10vw
 
+    @altoLogoApliado:10vh;
+    @altoNavegacion:9.2vh;
+
+    @espacioComienzoNormal:20vh;
+    @espacionComienzoApilado:70vw;
+
     #logo {
         position:fixed;
         left:@xLogo;
@@ -73,7 +79,7 @@ body {
 
         @media @apilados { 
             font-size: 27.5px; 
-            height: 10vh; 
+            height: @altoLogoApliado; 
             min-width: 320px;
             left:0;
             width:100%;
@@ -88,7 +94,7 @@ body {
             text-align: center;
             font-size: 25px; 
             position: fixed; 
-            height: 10vh; 
+            height: @altoLogoApliado; 
             top: 0; 
         }
 
@@ -154,19 +160,22 @@ body {
             width:inherit;
             min-width:inherit;
 
+            @media @apilados{
+                top: @altoLogoApliado;
+            }
+
             @media @ensanguchados {
                 visibility: hidden;
                 position: fixed;
                 z-index: 8;
                 width: 100%; 
-                margin-left: 0; 
-                top: 10vh;
+                margin-left: 0;
             }
 
             nav {
                 display: flex;
                 justify-content: space-around;
-                height: 9.2vh;//LA VARIABLE DE ARRIBA
+                height: @altoNavegacion;//LA VARIABLE DE ARRIBA
                 min-height: 55px;//LA VARIABLE DE ARRIBA
                 margin: 0;
                 min-width: 320px;//LA VARIABLE DE ARRIBA
@@ -197,18 +206,18 @@ body {
 
         #filler{
             .arcos-svg {
-                top: 9.2vh;//LA VARIABLE DE ARRIBA
+                top: @altoNavegacion;
                 width: @anchoContenido;//LA VARIABLE DE ARRIBA
                 min-width: 320px;//LA VARIABLE DE ARRIBA
                 position: fixed;
                 z-index: 1;
                 @media @apilados {
-                    top: 17.5vh; 
+                    top: @altoNavegacion+@altoLogoApliado;//17.5vh; 
                     width:100%;
                 }
                 @media @ensanguchados { 
                     position: fixed;
-                    top: 7vh;
+                    top: @altoLogoApliado;//7vh;
                     width: 100%; 
                 }
                 @media @arcosChicos{
@@ -222,7 +231,7 @@ body {
                 width: 80%;
                 margin-left: 10%;
                 position: absolute;
-                top: 30vh;//LA VERIABLE DE ARRIBA + un poco más
+                top: @altoNavegacion+@espacioComienzoNormal;//LA VERIABLE DE ARRIBA + un poco más
                 z-index: -1;
 
                 height: 100vh;//ESTIRA ARTIFICIALMENTE
@@ -232,10 +241,14 @@ body {
                 min-width: 256px;
                 background-color: whitesmoke;
 
+                @media @apilados {
+                    top:@altoNavegacion+@altoLogoApliado+@espacionComienzoApilado;
+                }
+
                 @media @ensanguchados {
-                    position: static; 
-                    height: 200vh ; 
-                    margin-top: 70vh; 
+                    //position: static; 
+                    //height: 200vh ; 
+                    top:@altoLogoApliado+@espacionComienzoApilado;
                 }
             }
 
