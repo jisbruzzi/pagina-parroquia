@@ -1,10 +1,10 @@
-* {
+* {/*
     
     -webkit-box-sizing: border-box; //* Safari 3.1+
     -moz-box-sizing: border-box; //* Firefox 2+
     -ms-box-sizing: border-box; //* IE 10+
     box-sizing: border-box; //* Standard syntax
-    
+    */
     
     font-size: 20px;
     
@@ -37,6 +37,7 @@ html, body {
 }
 
 body {
+    /*
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -44,11 +45,22 @@ body {
         flex-direction: column; 
         align-items: center;
     }
+    */
     
     background-image: url("https://1.bp.blogspot.com/-mY8fBxkzZ6s/WT9dopryxsI/AAAAAAAABMs/semrmB9-UFcsbO4iVSB_2KzVAdcJzvCkwCLcB/s1600/07%2B-%2BIGLESIA%2BDE%2BLORETO%252C%2B08-VI-2017.jpg");
     background-attachment: fixed;
 
+    @xLogo:5vw;
+    @anchoLogo:40vw;
+    @espacoLogoContenido:15vw;
+    @anchoContenido:30vw;
+    //sobra:10vw
+
     #logo {
+        position:fixed;
+        left:@xLogo;
+        width:@anchoLogo;
+
         font-size: 4.5vw;
         @media (max-width: 800px) {
             font-size: 4vw;
@@ -56,13 +68,15 @@ body {
 
         padding: 10px;
         z-index: 1;
-        position:fixed;
         background-color: white;
+        
 
         @media @apilados { 
             font-size: 27.5px; 
             height: 10vh; 
             min-width: 320px;
+            left:0;
+            width:100%;
         }
 
         @media @ensanguchados { 
@@ -109,14 +123,16 @@ body {
     }
 
     #container {
-        height: 100%;
-        width: 30%;
-        min-width: 320px;//ESTO ES UNA SUMA DE VARIABLES
+
         
-        margin-left:5vw;
-        margin-right:5vw;
+        height: 100%;
+        min-width: 320px;//ESTO ES UNA SUMA DE VARIABLES
     
-        position: relative;
+        position: absolute;
+
+        left:@xLogo+@anchoLogo+@espacoLogoContenido;
+        width:@anchoContenido;
+
         display: flex;
         flex-direction: column;
 
@@ -126,11 +142,11 @@ body {
             width: 100%; 
             margin: 0;
         }
-/* esto rompe todo??
         @media @apilados{
-            top: 9.2vh;
+            //top: 9.2vh; //esto rompe todo??
+            left:0;
+            width:100%;
         }
-*/
         #header {
             background:white;
             position: fixed;
@@ -182,12 +198,13 @@ body {
         #filler{
             .arcos-svg {
                 top: 9.2vh;//LA VARIABLE DE ARRIBA
-                width: 30%;//LA VARIABLE DE ARRIBA
+                width: @anchoContenido;//LA VARIABLE DE ARRIBA
                 min-width: 320px;//LA VARIABLE DE ARRIBA
                 position: fixed;
                 z-index: 1;
                 @media @apilados {
                     top: 17.5vh; 
+                    width:100%;
                 }
                 @media @ensanguchados { 
                     position: fixed;
@@ -238,14 +255,3 @@ a, .no-seleccionable {
 }
 
 a:hover{ cursor: pointer; }
-
-
-
-
-/*
-
-@media screen and  {
-    #logo { font-size: calc(8vw - 1vh + 2px); }
-}
-
-*/
