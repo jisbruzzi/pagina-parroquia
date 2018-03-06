@@ -39,7 +39,7 @@ gulp.task('webserver', function() {
 
 
 gulp.task("watch",function(){
-    gulp.watch(["preindex.html","texto.md"],["compilar"])
+    gulp.watch(["src/index.html","src/md/novedades.md","src/main.less"],["compilar"])
 })
 
 gulp.task("default",["compilar"])
