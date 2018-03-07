@@ -8,7 +8,7 @@
     
     font-size: 20px;
     
-     border: 1px solid red; 
+    // border: 1px solid red; 
 
     font-family: -apple-system,
         BlinkMacSystemFont,
@@ -228,11 +228,49 @@ body {
                     top: @altoLogoApliado;//7vh;
                     width: 100%; 
                 }
-                /*
-                @media @arcosChicos{
-                    top:42px;
+            }
+
+            #espacioBlanco {
+                position:fixed;
+                background-color:white;
+                top: @altoNavegacion;
+                width: @anchoContenido;
+                height:@anchoContenido*0.08;
+                min-width: 320px;
+
+                @media @apilados {
+                    top: @altoNavegacion+@altoLogoApliado;//17.5vh; 
+                    width:100%;
+                    height:8vw;
                 }
-                */
+                @media @ensanguchados { 
+                    position: fixed;
+                    top: @altoLogoApliado;//7vh;
+                    width: 100%; 
+                    height:8vw;
+                }
+            }
+
+            #espacioBlancoAtras {
+                position:fixed;
+                background-color:white;
+                top: @altoNavegacion;
+                width: @anchoContenido;
+                min-width: 320px;
+                height:@anchoContenido*0.12;
+                z-index:-4;
+
+                @media @apilados {
+                    top: @altoNavegacion+@altoLogoApliado;//17.5vh; 
+                    width:100vw;
+                    height:12vw;
+                }
+                @media @ensanguchados { 
+                    position: fixed;
+                    top: @altoLogoApliado;//7vh;
+                    width: 100vw; 
+                    height:12vw;
+                }
             }
 
             #avisos {
@@ -249,6 +287,8 @@ body {
                 border-radius: 10px;
                 min-width: 256px;
                 background-color: whitesmoke;
+
+                box-shadow: 0 0 15px 8px rgba(4,4,4,0.6);
 
                 @media @apilados {
                     top:@altoNavegacion+@altoLogoApliado+@espacionComienzoApilado;
