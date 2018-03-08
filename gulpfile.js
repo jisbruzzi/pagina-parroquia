@@ -40,6 +40,12 @@ gulp.task('webserver', function() {
 
 gulp.task("watch",function(){
     gulp.watch(["src/*.svg","src/index.html","src/md/novedades.md","src/main.less"],["compilar"])
+    gulp.src('.')
+    .pipe(webserver({
+      livereload: true,
+      directoryListing: true,
+      open: true
+    }));
 })
 
-gulp.task("default",["watch","webserver"])
+gulp.task("default",["compilar"])
