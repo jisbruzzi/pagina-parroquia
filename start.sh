@@ -1,0 +1,1 @@
+autoreload-server -w "**/**.{html,css,js}" . 8008
