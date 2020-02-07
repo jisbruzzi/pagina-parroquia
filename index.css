@@ -1,5 +1,5 @@
 .jumbotron {
-    background-image: url("img/frente_banner.png");
+    background-image: url("/assets/img/frente_banner.png");
     background-size: cover;
     background-position: center;
 }
