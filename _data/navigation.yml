@@ -1,4 +1,4 @@
 - name: Página Principal
   link: /
-- name: Blog
-  link: /blog.html
+- name: Novedades
+  link: /novedades.html
