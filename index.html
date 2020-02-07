@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <article>
     <div class="row">
         <div class="col-md contenedor-titulo">
@@ -12,53 +13,19 @@ layout: default
         </div>
     </div>
     <div class="row">
-        <section class="col-md-4">
-            <h3>Misas</h3>
-            <ul>
-                <li>Jueves, viernes y sábados:<br> 19:00 hs</li>
-                <li>Domingos: <br>10:00 hs y 19:00 hs</li>
-            </ul>
-        </section>
-        <section class="col-md-4">
-            <h3>Secretaría Parroquial</h3>
-            <p>
-                Martes y Viernes de 17:30 hs a 19:00 hs
-            </p>
-            <p>4207-7470</p>
-            <p><a href="mailto:parroquiasanjosedominico@gmail.com">parroquiasanjosedominico@gmail.com</a></p>
-            <p>
-                <b>Permanecerá cerrada desde el 18/1/20 hasta el 3/2/20</b>
-            </p>
-        </section>
-        <section class="col-md-4">
-            <h3>Calendario</h3>
-            <ul>
-                <li><b>Domingo 2 de Febrero:</b> 
-                    <br><i>Nuestra Señora de la Candelaria</i>
-                    <br>Bendición de las velas
-                    <br>Santa Misa: 10:00 hs y 19:00 hs
-                </li>
-                <li><b>Lunes 3 de Febrero:</b> 
-                    <br><i>San Blas, Obispo y Mártir</i>
-                    <br>Bendición de las gargantas
-                    <br>Santa Misa: 19:00 hs
-                </li>
-                <li><b>7 de Febrero:</b> primer viernes de mes
-                    <br><i>Dedicado al Sagrado Corazón de Jesús y a San Cayetano</i>
-                    <br>18:30 hs adoración al Santísimo
-                    <br>Sacramento y bendición
-                    <br>Santa Misa: 19:00 hs
-                </li>
-                <li><b>Sábado 15 de Febrero:</b>
-                    <br><i>Bautismos 11:00 hs</i>
-                </li>
-                <li><b>Miércoles 26 de Febrero:</b>
-                    <br><i>Miércoles de Ceniza</i>
-                    <br>Día de ayuno y abstinencia
-                    <br>Santa Misa: 19:00 hs
-                    <br>Imposición de las cenizas
-                </li>
-            </ul>
+        <div class="col-md-6">
+            <section>
+                {% capture col-misas %}{% include col-misas.md %}{% endcapture %}
+                {{col-misas | markdownify}}
+            </section>
+            <section>
+                {% capture col-secretaria %}{% include col-secretaria.md %}{% endcapture %}
+                {{col-secretaria | markdownify}}
+            </section>
+        </div>
+        <section class="col-md-6">
+            {% capture col-calendario %}{% include col-calendario.md %}{% endcapture %}
+            {{col-calendario | markdownify}}
         </section>
     </div>
 </article>
@@ -101,32 +68,9 @@ layout: default
 </article>
 <hr>
 <div class="row justify-content-md-center">
-    <article class="col-sm-8">
-        <h1 class="display-4 text-center">Catequesis</h1>
-        <h4>Inscripción</h4>
-        <p>Del 3 al 29 de Marzo de 2020 en la oficina parroquial de 17:30 hs a 19:00 hs.</p>
-        <h4>Requisitos</h4>
-        <ul>
-            <li>Vivir dentro del radio parroquial</li>
-            <li>Compromiso de los padres del niño a participar de la Santa Misa de las 10:00 hs todos los domingos junto con los niños</li>
-            <li>Documentación a presentar el día de la inscripción:
-                <ul>
-                    <li>Fotocopia del DNI</li>
-                    <li>Fotocopia y original del certificado de bautismo (en caso de estar bautizado)</li>
-                </ul>
-            </li>
-        </ul>
-        <h4>Programa para niños</h4>
-        <p>Para niños que estén cursando 3er grado o mayores.</p>
-        <p>Duración: 2 años. Durante el primer año, si no está bautizado recibirá este Sacramento y luego la Confirmación. Durante el segundo año tomará la primera Comunión.</p>
-        <h4>Programa para mayores de 15 años</h4>
-        <p><b>Para niños mayores de 15 años, adolescentes y adultos de todas las edades.</b></p>
-        <p>Duración: 12 meses. Tomarán la Confirmación a los 9 meses de Catequesis y la primera Comunión en el mes de Mayo del 2021.</p>
-        <h4>Comienzo de los encuentros</h4>
-        <ul>
-            <li>Para niños del segundo año: Comienza el Domingo 15/3/2020 con la Santa Misa a las 10:00 hs, acompañados de sus padres. De 11 a 12:30 encuentro con la catequista.</li>
-            <li>Para niños del primer año: Comienza el 29/3/2020, con la Santa Misa a las 10:00 hs, acompañados de sus padres.  De 11 a 12:30 encuentro con la catequista. </li>
-        </ul>
+    <article class="col-md-8">
+        {% capture contenido-catequesis %}{% include contenido-catequesis.md %}{% endcapture %}
+            {{contenido-catequesis | markdownify}}
         
     </article>
 </div>
