@@ -67,10 +67,29 @@
     <body>
         <header class="jumbotron jumbotron-fluid">
             <div class="container">
-                <h1 class="display-3 text-center">Parroquia<br class="w-100 d-lg-none" /> <span class="garamond bold">San José</span></h1>
+                <h1 class="display-3 text-center">Parroquia<br class="w-100 d-lg-none" /> <span class="garamond bold grande">San José</span></h1>
                 <p class="lead text-center"><b><adress>Cnel. Brandsen 4970 - Villa Domínico - Diócesis Avellaneda-Lanús</adress></b></p>
             </div>
         </header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top nav-cambiante">
+          <span class="navbar-brand marca-cambiante">Parroquia <span class="garamond bold">San José</span></span>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              {% for item in site.data.navigation %}
+              <li class="nav-item {% if page.url == item.link %}active{% endif %}">
+                <a href="{{ item.link }}" class="nav-link">
+                  {{ item.name }}
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </nav>
         <div class="container">
             {{ content }}
             <hr>
@@ -87,6 +106,39 @@
             </address>
         </footer>
         <br>
+        <script>
+          var topOfHeader = $("header").offset().top; //gets offset of header
+          var heightOfHeader = $("header").outerHeight(); //gets height of header
+
+          function transicionar(opaco){
+            if(opaco){
+              $(".nav-cambiante").css("background-color","#fffef9FF").css("border-bottom-color","#adadadFF")
+              $(".marca-cambiante").css("width","125pt").css("opacity",1)
+            }
+            else{
+              $(".nav-cambiante").css("background-color","#fffef971").css("border-bottom-color","#00000000")
+              $(".marca-cambiante").css("width",0).css("opacity",0)
+            }
+          }
+
+          let togglerVisible=()=>$(".nav-cambiante .navbar-toggler").is(":visible")
+          
+          function transicion(){
+            let abierto=$(".nav-cambiante .collapse").is(":visible")
+            
+            let celuAbierto=abierto && togglerVisible()
+            let opaco = $(window).scrollTop() > (topOfHeader + heightOfHeader) || celuAbierto;
+            transicionar(opaco);
+          }
+
+          function clickToggler(){
+            transicionar(true)
+          }
+
+          $(".nav-cambiante .navbar-toggler").click(clickToggler)
+          $(window).scroll(transicion);
+          $(transicion)
+        </script>
     </body>
 </html>
 

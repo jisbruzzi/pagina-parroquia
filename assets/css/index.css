@@ -19,13 +19,24 @@
 }
 .garamond{
     font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+}
+.grande{
     font-size:1.5em;
 }
 .bold{
     font-weight: 800;
 }
-/*
-.jumbotron .container {
-    background-color: rgba(255,255,255,0.8);
-    border-radius: 0.3em;
-}*/
+
+.nav-cambiante{
+    background-color:#fffef971;
+    transition: ease .5s;
+    border-bottom:#00000000;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+.marca-cambiante{
+    transition: ease .5s;
+    overflow: hidden;
+    opacity: 0;
+}
