@@ -19,6 +19,7 @@ Duración: 2 años. Durante el primer año, si no está bautizado recibirá este
 
 Duración: 12 meses. Tomarán la Confirmación a los 9 meses de Catequesis y la primera Comunión en el mes de Mayo del 2021.
 
-#### Comienzo de los encuentros
+#### Comienzo de los encuentros y horarios
 - Para niños del segundo año: Comienza el Domingo 15/3/2020 con la Santa Misa a las 10:00 hs, acompañados de sus padres. De 11 a 12:30 encuentro con la catequista.
 - Para niños del primer año: Comienza el 29/3/2020, con la Santa Misa a las 10:00 hs, acompañados de sus padres.  De 11 a 12:30 encuentro con la catequista.
+- Para niños mayores de 15 años y adultos de todas las edades: Comienza el 5/4 a las 11:00 hs.

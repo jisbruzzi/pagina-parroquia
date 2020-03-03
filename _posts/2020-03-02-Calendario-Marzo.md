@@ -1,5 +1,7 @@
-
-### Calendario
+---
+title:  "Calendario de Marzo"
+date:   2020-03-02
+---
 - **Domingo 1°:**
         <br>_1° domingo de Cuaresma_
 - **Viernes 6:** Primer viernes de mes
@@ -29,6 +31,5 @@
         <br>Celebración mensual de la Medalla Milagrosa
 - **Sábado 28:**
         <br>Fogones II "San José" a partir de las 15:00 hs
-        <br>Feria americana de Cáritas durante los fogones
 - **Domingo 29:**
         <br>Inicio de Catequesis primero y segundo año.
