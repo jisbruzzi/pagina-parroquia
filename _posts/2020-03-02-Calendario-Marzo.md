@@ -2,6 +2,8 @@
 title:  "Calendario de Marzo"
 date:   2020-03-02
 ---
+Calendario para el mes de Marzo 2020.
+
 - **Domingo 1°:**
         <br>_1° domingo de Cuaresma_
 - **Viernes 6:** Primer viernes de mes
