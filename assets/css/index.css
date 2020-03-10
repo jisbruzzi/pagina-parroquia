@@ -41,13 +41,13 @@
     opacity: 0;
 }
 
-article img {
+.blogpost img {
     max-width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-article p {
+.blogpost p {
     text-align: justify;
 }
