@@ -28,7 +28,6 @@
 - **Viernes 27:**
         <br>Celebración mensual de la Medalla Milagrosa
 - **Sábado 28:**
-        <br>Fogones II "San José" a partir de las 15:00 hs
-        <br>Feria americana de Cáritas durante los fogones
+        <br>Feria americana de Cáritas
 - **Domingo 29:**
         <br>Inicio de Catequesis primero y segundo año.
