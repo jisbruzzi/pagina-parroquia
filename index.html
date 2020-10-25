@@ -8,13 +8,8 @@ layout: normal
             <p>
                 <span class="display-4">Información general</span>
                 <br>
-                <i>Febrero 2020</i>
+                <i>Octubre 2020</i>
             </p>
-            <p style="text-align: center;">
-                <b><a href="/2020/03/10/Cronograma-novena">Cronograma detallado de las fiestas patronales</a></b>
-            </p>
-            <i>Se postponen los fogones II hasta que haya pasado la pandemia.</i>
-            <br>
         </div>
     </div>
     <div class="row">
@@ -23,37 +18,18 @@ layout: normal
                 {% capture col-misas %}{% include col-misas.md %}{% endcapture %}
                 {{col-misas | markdownify}}
             </section>
-            <section>
-                {% capture col-secretaria %}{% include col-secretaria.md %}{% endcapture %}
-                {{col-secretaria | markdownify}}
-            </section>
         </div>
         <section class="col-md-6">
-            {% capture col-calendario %}{% include col-calendario.md %}{% endcapture %}
-            {{col-calendario | markdownify}}
+            {% capture col-secretaria %}{% include col-secretaria.md %}{% endcapture %}
+            {{col-secretaria | markdownify}}
         </section>
     </div>
 </article>
 <hr>
 <article class="row justify-content-md-start">
     <div class="col-sm-8">
-        <h3>Notificaciones directas</h3>
-        <p>Haciendo click en el botón de abajo, podés permitir que te enviemos notificaciones directamente a través del navegador.</p>
-        <p>
-            <a href="#"><button type="button" class="btn btn-primary btn-lg sp_notify_prompt">Activar notificaciones</button></a>
-        </p>
-
-        <h3>Grupo de whatsapp</h3>
-        <p>Para enterarte de todas las novedades de la parroquia, unite al grupo de whatsapp.</p>
-        <p>Es un grupo en el cual sólo pueden escribir los administradores, con lo cual únicamente vas a recibir mensajes cuando se trate de novedades de la parroquia.</p>
-        <p>
-            <a href="https://chat.whatsapp.com/D5nueZWPFvL8qqrexc5LmL"><button type="button" class="btn btn-primary btn-lg">Unirte <img src="assets/img/WhatsApp_Logo_3.svg" style="height: 1em; width:1em"/></button></a>
-        </p>
-
         <h3>Página de facebook</h3>
         <p>También tenemos una <a href="https://www.facebook.com/Parroquia-San-Jos%C3%A9-Villa-Dom%C3%ADnico-1918-2020-893134424185074/">Página de facebook</a></p>
-
-        
     </div>
 </article>
 <hr>
@@ -80,11 +56,4 @@ layout: normal
         </div>
     </div>
 </article>
-<hr>
-<div class="row justify-content-md-center">
-    <article class="col-md-8">
-        {% capture contenido-catequesis %}{% include contenido-catequesis.md %}{% endcapture %}
-            {{contenido-catequesis | markdownify}}
-    </article>
-</div>
 
